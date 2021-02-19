@@ -1,4 +1,4 @@
-FROM ubuntu:20.04
+FROM ubuntu:20.04 AS build
 
 ENV MONERO_VERSION=0.17.1.9
 ENV MONERO_SHA256=0fb6f53b7b9b3b205151c652b6c9ca7e735f80bfe78427d1061f042723ee6381
@@ -14,6 +14,14 @@ RUN curl https://dlsrc.getmonero.org/cli/monero-linux-x64-v$MONERO_VERSION.tar.b
   cp ./monero-x86_64-linux-gnu-v$MONERO_VERSION/monerod . &&\
   rm -r monero-*
 
+
+
+FROM ubuntu:20.04
+
+WORKDIR /root
+
+COPY --from=build /root/monerod ./
+
 RUN mkdir -p /.bitmonero
 
 VOLUME /root/.bitmonero
@@ -22,4 +30,3 @@ EXPOSE 18080 18081
 
 ENTRYPOINT ["./monerod"]
 CMD ["--non-interactive", "--restricted-rpc", "--rpc-bind-ip=0.0.0.0", "--confirm-external-bind", "--enable-dns-blocklist", "--out-peers=16", "--prune-blockchain"]
-
