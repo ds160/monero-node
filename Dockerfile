@@ -1,7 +1,7 @@
 FROM ubuntu:20.04
 
-ENV MONERO_VERSION=0.17.1.8
-ENV MONERO_SHA256=b566652c5281970c6137c27dd15002fe6d4c9230bc37d81545b2f36c16e7d476
+ENV MONERO_VERSION=0.17.1.9
+ENV MONERO_SHA256=0fb6f53b7b9b3b205151c652b6c9ca7e735f80bfe78427d1061f042723ee6381
 
 RUN apt-get update && apt-get install -y curl bzip2
 
@@ -21,5 +21,5 @@ VOLUME /root/.bitmonero
 EXPOSE 18080 18081
 
 ENTRYPOINT ["./monerod"]
-CMD ["--non-interactive", "--restricted-rpc", "--rpc-bind-ip=0.0.0.0", "--confirm-external-bind", "--enable-dns-blocklist", "--out-peers=16"]
+CMD ["--non-interactive", "--restricted-rpc", "--rpc-bind-ip=0.0.0.0", "--confirm-external-bind", "--enable-dns-blocklist", "--out-peers=16", "--prune-blockchain"]
 
