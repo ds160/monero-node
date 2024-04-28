@@ -1,13 +1,13 @@
-FROM ubuntu:20.04 AS build
+FROM ubuntu:24.04 AS build
 
-ENV MONERO_VERSION=0.18.3.1
-ENV MONERO_SHA256=23af572fdfe3459b9ab97e2e9aa7e3c11021c955d6064b801a27d7e8c21ae09d
+ENV MONERO_VERSION=0.18.3.3
+ENV MONERO_SHA256=47c7e6b4b88a57205800a2538065a7874174cd087eedc2526bee1ebcce0cc5e3
 
 RUN apt-get update && apt-get install -y curl bzip2
 
 WORKDIR /root
 
-RUN curl https://dlsrc.getmonero.org/cli/monero-linux-x64-v$MONERO_VERSION.tar.bz2 -O &&\
+RUN curl https://downloads.getmonero.org/cli/monero-linux-x64-v$MONERO_VERSION.tar.bz2 -O &&\
   echo "$MONERO_SHA256  monero-linux-x64-v$MONERO_VERSION.tar.bz2" | sha256sum -c - &&\
   tar -xvf monero-linux-x64-v$MONERO_VERSION.tar.bz2 &&\
   rm monero-linux-x64-v$MONERO_VERSION.tar.bz2 &&\
@@ -16,7 +16,7 @@ RUN curl https://dlsrc.getmonero.org/cli/monero-linux-x64-v$MONERO_VERSION.tar.b
 
 
 
-FROM ubuntu:20.04
+FROM ubuntu:24.04
 
 WORKDIR /root
 
