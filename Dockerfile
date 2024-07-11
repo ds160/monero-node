@@ -1,4 +1,4 @@
-FROM ubuntu:24.04 AS build
+FROM --platform=linux/amd64 ubuntu:24.04 AS build
 
 ENV MONERO_VERSION=0.18.3.3
 ENV MONERO_SHA256=47c7e6b4b88a57205800a2538065a7874174cd087eedc2526bee1ebcce0cc5e3
@@ -16,7 +16,7 @@ RUN curl https://downloads.getmonero.org/cli/monero-linux-x64-v$MONERO_VERSION.t
 
 
 
-FROM ubuntu:24.04
+FROM --platform=linux/amd64 ubuntu:24.04
 
 WORKDIR /root
 
