@@ -53,35 +53,34 @@ To build the Monero full node Docker image, follow these steps:
 
 That's it! You now have a Monero full node running locally with your own copy of the blockchain.
 
-## Connect Monero GUI Wallet via Advanced Mode
+## Create Monero GUI Wallet
 
-To connect the Monero GUI Wallet to your locally running Monero full node in Advanced mode, follow these steps:
+To create and connect a Monero GUI Wallet to your locally running Monero full node in Advanced mode, follow these steps:
 
 1. Open the Monero GUI Wallet on your computer.
 
-2. Click on the **Settings** tab in the top menu bar.
+2. Click on the **Change wallet mode** button on the Welcome page.
 
-3. In the settings menu, select **Wallet**.
+3. On the mode Selection page, select **Advanced mode**.
 
-4. Under the **Wallet Creation** section, click on the **Create Wallet** button.
+4. Back on the Welcome page, click on the **Create a new wallet** button.
 
-5. Choose a name for your wallet and set a strong password. Click **Next** to proceed.
+5. Choose a name and location for your wallet. Click **Next** to proceed.
 
-6. In the **Restore Wallet** section, select **Advanced mode** and click **Next**.
+6. Write down your recovery seed and click **Next**.
 
-7. In the **Daemon Settings** section, select **Local Node (Recommended)**.
+7. Verify your recovery phrase, select **Next**.
 
-8. Enter the following information in the **Daemon Address** field:
+8. Give your wallet a strong password and confirm it. Click **Next** to proceed.
 
-    - **Host:** Enter the IP address or hostname of your NAS or `localhost`.
+9. Connect to a remote node and add the remote node with following information:
+    - **Address:** The IP address or hostname of your NAS or `localhost`.
     - **Port:** `18081` (or the port you have mapped on your NAS).
 
-9. Click **Connect** to establish a connection to your locally running Monero full node.
+    Click **Next**.
 
-10. If the connection is successful, you will see a confirmation message. Click **Next** to proceed.
+10. Check the configuration and click **Create wallet**.
 
-11. In the **Wallet File** section, choose a location to save your wallet file and click **Save**.
-
-12. Enter your wallet password to unlock the wallet.
+11. Enter your wallet password to unlock the wallet.
 
 Congratulations! You have successfully connected the Monero GUI Wallet to your running Monero full node in Advanced mode.
