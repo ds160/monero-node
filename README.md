@@ -10,6 +10,9 @@ Running a Monero full node locally offers several benefits, including:
 - **Faster synchronization:** With a local copy of the blockchain, you don't have to rely on external nodes for synchronization, resulting in faster and more reliable syncing.
 - **Custom configurations:** You have full control over the configuration of your Monero node, allowing you to tailor it to your specific needs.
 
+> [!NOTE]
+> You can also run the Docker image on a NAS (Network Attached Storage) to maintain a synchronized blockchain at all times.
+
 ## Build
 
 To build the Monero full node Docker image, follow these steps:
@@ -49,9 +52,6 @@ To build the Monero full node Docker image, follow these steps:
     You should see logs indicating that the node has successfully started.
 
 That's it! You now have a Monero full node running locally with your own copy of the blockchain.
-
-> [!NOTE]
-> You can also run the Docker image on a NAS (Network Attached Storage) to maintain a synchronized blockchain at all times.
 
 ## Connect Monero GUI Wallet via Advanced Mode
 
