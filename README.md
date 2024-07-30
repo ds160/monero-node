@@ -50,7 +50,8 @@ To build the Monero full node Docker image, follow these steps:
 
 That's it! You now have a Monero full node running locally with your own copy of the blockchain.
 
-You can also run the Docker image on a NAS (Network Attached Storage) to maintain a synchronized blockchain at all times.
+> [!NOTE]
+> You can also run the Docker image on a NAS (Network Attached Storage) to maintain a synchronized blockchain at all times.
 
 ## Connect Monero GUI Wallet via Advanced Mode
 
