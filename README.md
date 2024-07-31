@@ -83,4 +83,4 @@ To create and connect a Monero GUI Wallet to your locally running Monero full no
 
 11. Enter your wallet password to unlock the wallet.
 
-Congratulations! You have successfully connected the Monero GUI Wallet to your running Monero full node in Advanced mode.
+Congratulations! You have successfully connected the Monero GUI Wallet to your running Monero full node.
