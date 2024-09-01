@@ -1,47 +1,47 @@
-# Monero Full Node
+# Monero Node
 
-This Dockerfile provides a convenient way to run a Monero full node using your own copy of the blockchain. It gives you complete control over your Monero node.
+This Dockerfile provides a convenient way to run a Monero node using your own copy of the blockchain. It gives you complete control over your Monero node.
 
 ## Overview
 
-Running a Monero full node locally offers several benefits, including:
+Running a Monero node locally offers several benefits, including:
 
 - **Increased privacy:** By using your own copy of the blockchain, you can ensure that your transactions are not being monitored by external nodes.
 - **Faster synchronization:** With a local copy of the blockchain, you don't have to rely on external nodes for synchronization, resulting in faster and more reliable syncing.
-- **Custom configurations:** You have full control over the configuration of your Monero node, allowing you to tailor it to your specific needs.
+- **Custom configurations:** You have complete control over the configuration of your Monero node, allowing you to tailor it to your specific needs.
 
 > [!NOTE]
 > You can also run the Docker image on a NAS (Network Attached Storage) to maintain a synchronized blockchain at all times.
 
 ## Build
 
-To build the Monero full node Docker image, follow these steps:
+To build the Monero node Docker image, follow these steps:
 
-1. Clone the Monero full node repository:
+1. Clone the Monero node repository:
 
     ```shell
-    git clone https://github.com/ds160/monero-full-node.git
+    git clone https://github.com/ds160/monero-node.git
     ```
 
 2. Navigate into the cloned directory:
 
     ```shell
-    cd monero-full-node
+    cd monero-node
     ```
 
 3. Build the Docker image:
 
     ```shell
-    docker build -t monero-full-node .
+    docker build -t monero-node .
     ```
 
 4. Run the Docker container:
 
     ```shell
-    docker run -d --name monero-node -p 18080:18080 -p 18081:18081 -v ${PWD}/path/to/store/blockchain:/root/.bitmonero monero-full-node
+    docker run -d --name monero-node -p 18080:18080 -p 18081:18081 -v ${PWD}/path/to/store/blockchain:/root/.bitmonero monero-node
     ```
 
-    This command starts the Monero full node container, exposes the necessary ports for communication, and stores the blockchain at the specified path.
+    This command starts the Monero node container, exposes the necessary ports for communication, and stores the blockchain at the specified path.
 
 5. Verify that the node is running:
 
@@ -51,11 +51,11 @@ To build the Monero full node Docker image, follow these steps:
 
     You should see logs indicating that the node has successfully started.
 
-That's it! You now have a Monero full node running locally with your own copy of the blockchain.
+That's it! You now have a Monero node running locally with your own copy of the blockchain.
 
 ## Create Monero GUI Wallet
 
-To create and connect a Monero GUI Wallet to your locally running Monero full node in Advanced mode, follow these steps:
+To create and connect a Monero GUI Wallet to your locally running Monero node in Advanced mode, follow these steps:
 
 1. Open the Monero GUI Wallet on your computer.
 
@@ -83,4 +83,4 @@ To create and connect a Monero GUI Wallet to your locally running Monero full no
 
 11. Enter your wallet password to unlock the wallet.
 
-Congratulations! You have successfully connected the Monero GUI Wallet to your running Monero full node.
+Congratulations! You have successfully connected the Monero GUI Wallet to your running Monero node.
